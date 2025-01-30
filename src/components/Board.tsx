@@ -7,18 +7,18 @@ export const Board: React.FC = () => {
 
   const getTileColor = (state: string, rowIndex: number, hasLetters: boolean) => {
     if (rowIndex < currentRow && hasLetters && state === 'empty') {
-      return 'bg-gray-500 text-white';
+      return 'bg-gray-500 text-white dark:bg-gray-600';
     }
 
     switch (state) {
       case 'correct':
-        return 'bg-green-500 text-white border-green-600';
+        return 'bg-green-500 text-white border-green-600 dark:bg-green-600 dark:border-green-700';
       case 'present':
-        return 'bg-yellow-500 text-black border-yellow-600';
+        return 'bg-yellow-500 text-black border-yellow-600 dark:bg-yellow-600 dark:border-yellow-700';
       case 'absent':
-        return 'bg-gray-500 text-white border-gray-600';
+        return 'bg-gray-500 text-white border-gray-600 dark:bg-gray-700 dark:border-gray-800';
       default:
-        return 'bg-white text-black border-gray-300 hover:border-gray-400';
+        return 'bg-white text-black border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:border-gray-500';
     }
   };
 

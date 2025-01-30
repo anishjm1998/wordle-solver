@@ -2,43 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+/* Ensure full height */
+html, body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.app-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Light Mode (default) */
+:root {
+  --bg-color: white;
+  --text-color: black;
 }
 
-@layer utilities {
-  .bg-gradient-text {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
+/* Dark Mode */
+.dark {
+  --bg-color: #121212;
+  --text-color: white;
 }
 
-/* Custom Styles for WordList Background */
-.hidden.lg\:block.w-\[350px\].p-4.bg-white.border-l.border-gray-200.overflow-y-auto {
-  background-color: #f4f4f4; /* Set to match the background color of the app */
-  border-left: 1px solid #e5e7eb; /* Same border color */
-  border-radius: 8px; /* Optional: add some rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
