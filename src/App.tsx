@@ -3,6 +3,7 @@ import { Board } from './components/Board';
 import { Keyboard } from './components/Keyboard';
 import { WordList } from './components/WordList';
 import { GameProvider } from './context/GameContext';
+import Tutorial from './components/Tutorial'; // Import the Tutorial component
 
 function App() {
   useEffect(() => {
@@ -20,15 +21,27 @@ function App() {
 
   return (
     <GameProvider>
-      <div className="flex min-h-screen bg-gray-100">
-        <div className="flex-1 flex flex-col items-center p-8">
-          <h1 className="text-4xl font-bold mb-8">Wordle Solver</h1>
-          <div className="flex flex-col items-center gap-8">
+      <div className="flex min-h-screen bg-gray-100 justify-center items-center p-6">
+        {/* Tutorial Component (Left Side) */}
+        <div className="mr-12">
+          <Tutorial /> {/* Place the tutorial here */}
+        </div>
+
+        {/* Main Content (Board and Keyboard) */}
+        <div className="flex-1 flex flex-col items-center gap-8">
+          <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text">
+            Wordle Solver
+          </h1>
+          <div className="flex flex-col items-center gap-6 sm:gap-8 w-full max-w-2xl">
             <Board />
             <Keyboard />
           </div>
         </div>
-        <WordList />
+
+        {/* WordList Sidebar (Right Side) */}
+        <div className="hidden lg:block w-[350px] p-4 bg-transparent overflow-y-auto">
+          <WordList />
+        </div>
       </div>
     </GameProvider>
   );
