@@ -11,7 +11,7 @@ A web-based Wordle solver that helps players solve Wordle puzzles more efficient
 
 ## Tech Stack:
 
-- **Frontend:** React, Tailwind CSS, TypeScript
+- **Frontend:** React, Tailwind CSS, TypeScript, HTML, JavaScript
 - **State Management:** React Context API
 - **UI Framework:** Tailwind CSS for responsive and modern UI design
 
