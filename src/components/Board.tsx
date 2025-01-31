@@ -40,14 +40,14 @@ export const Board: React.FC = () => {
   }, [currentRow, board, letterStates, toggleLetterState]);
 
   return (
-    <div className="grid grid-rows-6 gap-2 p-4">
+    <div className="grid grid-rows-6 gap-3 p-6">
       {board.map((row, rowIndex) => (
-        <div key={rowIndex} className="grid grid-cols-5 gap-2">
+        <div key={rowIndex} className="grid grid-cols-5 gap-3">
           {row.map((letter, colIndex) => (
             <button
               key={colIndex}
               className={classNames(
-                'w-14 h-14 border-2 flex items-center justify-center text-2xl font-bold uppercase',
+                'w-16 h-16 border-2 flex items-center justify-center text-3xl font-bold uppercase',
                 'rounded-lg transition-all duration-200',
                 'shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500',
                 getTileColor(letterStates[rowIndex][colIndex], rowIndex, !!letter)

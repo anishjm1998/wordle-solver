@@ -47,9 +47,10 @@ export const Keyboard: React.FC = () => {
       case 'present':
         return `${baseStyles} bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-600 dark:hover:bg-yellow-700 text-white px-3 py-3 sm:px-4 sm:py-4`;
       case 'absent':
-        return `${baseStyles} bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 text-white px-3 py-3 sm:px-4 sm:py-4`;
+        return `${baseStyles} bg-gray-500 hover:bg-gray-600 dark:bg-gray-700 dark:hover:bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4`;
       default:
-        return `${baseStyles} bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-white px-3 py-3 sm:px-4 sm:py-4`;
+        // Adjusted background color for unused/unpressed keys in dark mode
+        return `${baseStyles} bg-gray-300 hover:bg-gray-400 dark:bg-gray-500 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-3 sm:px-4 sm:py-4`;
     }
   };
 

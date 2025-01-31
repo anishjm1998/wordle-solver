@@ -6,9 +6,9 @@ export const WordList: React.FC = () => {
 
   return (
     <div className="bg-transparent">
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
         {/* Header with Word Count */}
-        <div className="p-4 bg-gradient-to-r from-indigo-600 to-pink-500 dark:from-gray-800 dark:to-gray-900 rounded-t-lg text-white">
+        <div className="p-4 bg-gradient-to-r from-indigo-500 to-indigo-600 dark:from-gray-800 dark:to-gray-900 rounded-t-lg text-white">
           <h2 className="text-xl font-semibold">
             Possible Words
             <span className="ml-2 text-sm font-light text-gray-200">
@@ -23,7 +23,7 @@ export const WordList: React.FC = () => {
             {possibleWords.map((word, index) => (
               <li
                 key={index}
-                className="p-3 text-center bg-gray-50 dark:bg-gray-700 rounded-lg text-gray-800 dark:text-white font-medium shadow-md hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-white transition-all duration-200 ease-in-out"
+                className="p-3 text-center bg-gray-50 dark:bg-gray-700 rounded-lg text-gray-800 dark:text-white font-medium shadow-sm hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-white transition-all duration-200 ease-in-out"
               >
                 {word}
               </li>
