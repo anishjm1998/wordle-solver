@@ -22,7 +22,7 @@ function App() {
 
   return (
     <GameProvider>
-      <div className="flex min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white justify-center items-center p-6 transition-colors duration-300">
+      <div className="flex min-h-screen bg-[#e4ecf7] dark:bg-gray-900 text-black dark:text-white justify-center items-center p-6 transition-colors duration-300">
         <ThemeProvider />
         
         {/* Tutorial Component (Left Side) */}

@@ -6,12 +6,12 @@ export const WordList: React.FC = () => {
 
   return (
     <div className="bg-transparent">
-      <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+      <div className="bg-[#9ec5f7] dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-blue-300 dark:border-gray-700">
         {/* Header with Word Count */}
-        <div className="p-4 bg-gradient-to-r from-indigo-500 to-indigo-600 dark:from-gray-800 dark:to-gray-900 rounded-t-lg text-white">
+        <div className="p-4 bg-[#7ea9e4] dark:bg-gray-700 rounded-t-lg text-blue-900 dark:text-gray-200">
           <h2 className="text-xl font-semibold">
             Possible Words
-            <span className="ml-2 text-sm font-light text-gray-200">
+            <span className="ml-2 text-sm font-light text-blue-600 dark:text-gray-400">
               ({possibleWords.length})
             </span>
           </h2>
@@ -23,7 +23,7 @@ export const WordList: React.FC = () => {
             {possibleWords.map((word, index) => (
               <li
                 key={index}
-                className="p-3 text-center bg-gray-50 dark:bg-gray-700 rounded-lg text-gray-800 dark:text-white font-medium shadow-sm hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:text-white transition-all duration-200 ease-in-out"
+                className="p-3 text-center bg-white dark:bg-gray-700 rounded-lg text-blue-800 dark:text-gray-300 font-medium shadow-sm hover:bg-blue-200 dark:hover:bg-gray-600 transition-all duration-200 ease-in-out"
               >
                 {word}
               </li>
@@ -34,3 +34,5 @@ export const WordList: React.FC = () => {
     </div>
   );
 };
+
+export default WordList;

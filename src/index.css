@@ -9,24 +9,30 @@
   box-sizing: border-box;
 }
 
+#root, .App {
+  background-color: #dbeafe;
+  min-height: 100vh;
+}
+
 /* Ensure full height */
 html, body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   width: 100%;
   transition: background-color 0.3s ease-in-out;
+  background-color: #dbeafe;
 }
 
 /* Light Mode (default) */
 :root {
-  --bg-color: white;
-  --text-color: black;
+  --bg-color: #dbeafe; /* Light blue background */
+  --text-color: #1e3a8a; /* Dark blue text */
 }
 
 /* Dark Mode */
 .dark {
-  --bg-color: #121212;
-  --text-color: white;
+  --bg-color: #121212; /* Black background */
+  --text-color: #e5e7eb; /* Light gray text */
 }
 
 body {
