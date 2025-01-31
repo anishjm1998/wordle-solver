@@ -20,18 +20,22 @@ A web-based Wordle solver that helps players solve Wordle puzzles more efficient
 Follow these steps to get the project running locally:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/your-username/wordle-solver.git
 
 2. Navigate into the project directory:
+
    ```bash
    cd wordle-solver
 
 3. Install the dependencies:
+
    ```bash
    npm install
 
 4. Start the development server:
+
    ```bash
    npm start
 
@@ -40,9 +44,13 @@ Follow these steps to get the project running locally:
 ## Usage:
 
 1. Go to Wordle https://www.nytimes.com/games/wordle/index.html.
+
 2. Play the game and enter your guess in the solver.
+
 3. Click on letters to cycle through the possible feedback colors (gray, yellow, green).
+
 4. The list of possible words will update as you enter each guess.
+
 5. Use the keyboard provided to enter letters or use the Enter/Backspace keys.
 
 ## Color Guide:
@@ -63,15 +71,22 @@ If you'd like to contribute to this project, feel free to fork the repository an
 ## How to Contribute:
 
 1. Fork the repository.
+
 2. Create a new branch:
+
    ```bash
    git checkout -b feature/your-feature
+
 3. Make your changes and commit them:
+
    ```bash
    git commit -am 'Add feature'
+
 4. Push to your branch:
+
    ```bash
    git push origin feature/your-feature
+
 5. Submit a pull request.
 
 -------------------------------------------------------------------------------------------------------------------------------------
