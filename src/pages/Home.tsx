@@ -3,24 +3,26 @@ import { Board } from "../components/Board";
 import { Keyboard } from "../components/Keyboard";
 import { WordList } from "../components/WordList";
 import Tutorial from "../components/Tutorial";
-import "../styles/home.css"; // Import new styles
+import "../styles/home.css"; // Ensure styles are imported
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col items-center p-6 sm:p-10 min-h-screen w-full text-blue-900 dark:text-gray-200">
+    <div className="flex flex-col items-center p-6 sm:p-10 min-h-screen w-full bg-[#e4ecf7] dark:bg-gray-900 text-blue-900 dark:text-gray-200">
       {/* Title Box */}
-      <div className="component-bg px-8 py-6 rounded-xl shadow-xl border mb-8">
-        <h1 className="text-5xl sm:text-6xl font-extrabold text-center tracking-wide bg-gradient-to-r from-blue-700 to-blue-800 bg-clip-text text-transparent">
-          Wordle Solver
-        </h1>
-        <p className="text-sm text-center text-blue-700 mt-2">
-          Your ultimate tool to solve Wordle puzzles!
-        </p>
+      <div className="px-8 py-6 rounded-xl shadow-xl border-2 border-blue-400 dark:border-gray-600 bg-[#9ec5f7] dark:bg-gray-800 text-center">
+      <h1 className="text-5xl font-extrabold text-center text-[#1e3a8a] dark:text-[#d1d5db] mt-4">
+  Wordle Solver
+</h1>
+
+
+
+
+
       </div>
 
       {/* Main Layout */}
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-7xl mx-auto mt-8">
-        <div className="component-bg w-full lg:w-[300px] p-4 rounded-lg shadow-xl border">
+        <div className="w-full lg:w-[300px]">
           <Tutorial />
         </div>
 
@@ -28,7 +30,7 @@ const Home: React.FC = () => {
           <Board />
         </div>
 
-        <div className="component-bg w-full lg:w-[300px] p-4 rounded-lg shadow-xl border">
+        <div className="w-full lg:w-[300px]">
           <WordList />
         </div>
       </div>

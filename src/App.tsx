@@ -22,9 +22,9 @@ function App() {
 
   return (
     <GameProvider>
-      <div className="flex min-h-screen bg-[#e4ecf7] dark:bg-gray-900 text-black dark:text-white justify-center items-center p-6 transition-colors duration-300">
+      <div className="flex min-h-screen bg-[#dfe9fc] dark:bg-gray-900 text-black dark:text-white justify-center items-center p-6 transition-colors duration-300">
         <ThemeProvider />
-        
+
         {/* Tutorial Component (Left Side) */}
         <div className="mr-12">
           <Tutorial />
@@ -32,9 +32,14 @@ function App() {
 
         {/* Main Content (Board and Keyboard) */}
         <div className="flex-1 flex flex-col items-center gap-8">
-          <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-gray-500 dark:to-gray-400 bg-clip-text">
-            Wordle Solver
-          </h1>
+        <h1 className="text-5xl font-extrabold text-center text-[#1e3a8a] dark:text-[#d1d5db] mt-4">
+  Wordle Solver
+</h1>
+
+
+
+
+
           <div className="flex flex-col items-center gap-6 sm:gap-8 w-full max-w-2xl">
             <Board />
             <Keyboard />
