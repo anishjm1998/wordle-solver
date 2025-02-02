@@ -29,17 +29,24 @@ html, body {
   --text-color: #1e3a8a; /* Dark blue text */
 }
 
-/* Dark Mode */
-.dark {
-  --bg-color: #121212; /* Black background */
-  --text-color: #e5e7eb; /* Light gray text */
+/* Dark Mode (Forced Default) */
+html {
+  background-color: #121212; /* Dark mode background */
+  color: #e5e7eb; /* Light gray text */
 }
 
+.dark {
+  --bg-color: #121212;
+  --text-color: #e5e7eb;
+}
+
+/* Apply colors */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
+/* Custom Scrollbar Styles */
 .custom-scrollbar::-webkit-scrollbar {
   width: 10px; /* Larger for easier navigation */
 }

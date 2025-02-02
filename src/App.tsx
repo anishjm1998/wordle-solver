@@ -4,10 +4,20 @@ import { Keyboard } from './components/Keyboard';
 import { WordList } from './components/WordList';
 import { GameProvider } from './context/GameContext';
 import Tutorial from './components/Tutorial';
-import ThemeProvider from "./components/ThemeProvider";
+import ThemeProvider from './components/ThemeProvider';
 
 function App() {
   useEffect(() => {
+    // Only update theme if localStorage has a saved theme
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'light') {
+      document.documentElement.classList.remove('dark'); // Switch to light mode
+    } else {
+      document.documentElement.classList.add('dark'); // Default is dark mode
+    }
+
+    // Custom key event handling
     const handleKeyDown = (e: KeyboardEvent) => {
       const key = e.key;
       if (key.match(/^[a-zA-Z]$/) || key === 'Backspace' || key === 'Enter') {
@@ -32,13 +42,9 @@ function App() {
 
         {/* Main Content (Board and Keyboard) */}
         <div className="flex-1 flex flex-col items-center gap-8">
-        <h1 className="text-5xl font-extrabold text-center text-[#1e3a8a] dark:text-[#d1d5db] mt-4">
-  Wordle Solver
-</h1>
-
-
-
-
+          <h1 className="text-5xl font-extrabold text-center text-[#1e3a8a] dark:text-[#d1d5db] mt-4">
+            Wordle Solver
+          </h1>
 
           <div className="flex flex-col items-center gap-6 sm:gap-8 w-full max-w-2xl">
             <Board />
