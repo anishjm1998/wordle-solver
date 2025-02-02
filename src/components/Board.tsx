@@ -25,10 +25,10 @@ export const Board: React.FC = () => {
   useEffect(() => {
     if (currentRow > 0) {
       const previousRow = currentRow - 1;
-      const hasUnmarkedLetters = board[previousRow].some((letter, index) => 
+      const hasUnmarkedLetters = board[previousRow].some((letter, index) =>
         letter && letterStates[previousRow][index] === 'empty'
       );
-      
+
       if (hasUnmarkedLetters) {
         board[previousRow].forEach((letter, index) => {
           if (letter && letterStates[previousRow][index] === 'empty') {

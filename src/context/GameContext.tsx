@@ -30,7 +30,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       if (key === 'Backspace') {
         if (currentCol > 0) {
-          const newBoard = board.map(row => [...row]); // Deep copy
+          const newBoard = board.map(row => [...row]);
           newBoard[currentRow][currentCol - 1] = '';
           setBoard(newBoard);
           setCurrentCol(currentCol - 1);
@@ -56,7 +56,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
 
       if (key.length === 1 && /^[a-z]$/i.test(key) && currentCol < 5) {
-        const newBoard = board.map(row => [...row]); // Deep copy
+        const newBoard = board.map(row => [...row]);
         newBoard[currentRow][currentCol] = key.toLowerCase();
         setBoard(newBoard);
         setCurrentCol(currentCol + 1);
@@ -68,7 +68,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const toggleLetterState = useCallback((row: number, col: number) => {
     const states: LetterState[] = ['empty', 'absent', 'present', 'correct'];
     setLetterStates(prev => {
-      const newStates = prev.map(row => [...row]); // Deep copy
+      const newStates = prev.map(row => [...row]);
       const currentIndex = states.indexOf(prev[row][col]);
       const nextIndex = (currentIndex + 1) % states.length;
       newStates[row][col] = states[nextIndex];

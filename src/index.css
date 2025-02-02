@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#root, .App {
+#root,
+.App {
   background-color: #dbeafe;
   min-height: 100vh;
 }
 
-/* Ensure full height */
-html, body {
+html,
+body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   width: 100%;
@@ -23,16 +23,14 @@ html, body {
   background-color: #dbeafe;
 }
 
-/* Light Mode (default) */
 :root {
-  --bg-color: #dbeafe; /* Light blue background */
-  --text-color: #1e3a8a; /* Dark blue text */
+  --bg-color: #dbeafe;
+  --text-color: #1e3a8a;
 }
 
-/* Dark Mode (Forced Default) */
 html {
-  background-color: #121212; /* Dark mode background */
-  color: #e5e7eb; /* Light gray text */
+  background-color: #121212;
+  color: #e5e7eb;
 }
 
 .dark {
@@ -40,15 +38,13 @@ html {
   --text-color: #e5e7eb;
 }
 
-/* Apply colors */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
-/* Custom Scrollbar Styles */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 10px; /* Larger for easier navigation */
+  width: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -65,29 +61,27 @@ body {
   background: #4a7bb3;
 }
 
-/* Scrollbar for Light Mode */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #e4ecf7; /* Light mode background */
+  background: #e4ecf7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a0aec0; /* Scroll thumb */
+  background: #a0aec0;
   border-radius: 10px;
 }
 
-/* Scrollbar for Dark Mode */
 .dark ::-webkit-scrollbar-track {
-  background: #2d2d2d; /* Dark mode background */
+  background: #2d2d2d;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #666; /* Dark mode thumb */
+  background: #666;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #888; /* Dark mode hover thumb */
+  background: #888;
 }

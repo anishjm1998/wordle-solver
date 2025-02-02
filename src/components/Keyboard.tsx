@@ -32,17 +32,17 @@ export const Keyboard: React.FC = () => {
 
   const getKeyStyles = (key: string) => {
     const baseStyles = "font-bold rounded-lg transition-all duration-200 active:scale-95 text-sm sm:text-base flex items-center justify-center";
-  
+
     if (key === 'Enter') {
       return `${baseStyles} bg-green-100 dark:bg-green-500 hover:bg-green-200 dark:hover:bg-green-600 text-green-700 dark:text-white px-4 py-3 sm:px-6 sm:py-4`;
     }
     if (key === 'Backspace') {
       return `${baseStyles} bg-red-100 dark:bg-red-500 hover:bg-red-200 dark:hover:bg-red-600 text-red-700 dark:text-white px-4 py-3 sm:px-6 sm:py-4 text-xl`;
     }
-  
+
     const state = getLetterState(key);
-    const shadowStyle = "shadow-md"; // Added shadow for better visibility
-  
+    const shadowStyle = "shadow-md";
+
     switch (state) {
       case 'correct':
         return `${baseStyles} bg-green-600 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700 text-white px-3 py-3 sm:px-4 sm:py-4 ${shadowStyle}`;
@@ -51,11 +51,10 @@ export const Keyboard: React.FC = () => {
       case 'absent':
         return `${baseStyles} bg-gray-500 hover:bg-gray-600 dark:bg-gray-700 dark:hover:bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 ${shadowStyle}`;
       default:
-        // Light mode keys now have a slight border for visibility
         return `${baseStyles} bg-gray-300 hover:bg-gray-400 dark:bg-gray-500 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-3 sm:px-4 sm:py-4 border border-gray-400 shadow-md`;
     }
   };
-  
+
   return (
     <div className="bg-[#a0c4ff] dark:bg-gray-800 backdrop-blur-sm rounded-xl shadow-lg p-4 max-w-3xl mx-auto border border-gray-400 dark:border-gray-700">
       <div className="flex flex-col gap-2">

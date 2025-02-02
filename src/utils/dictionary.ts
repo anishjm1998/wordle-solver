@@ -11,11 +11,11 @@ export interface WordGuess {
 
 export const findPossibleWords = (guesses: WordGuess[]): string[] => {
   return DICTIONARY.filter(word => {
-    
+
     return guesses.every(guess => {
       const wordLetters = word.split('');
       const guessLetters = guess.word.split('');
-      
+
       for (let i = 0; i < 5; i++) {
         const state = guess.states[i];
         const letter = guessLetters[i];
@@ -23,17 +23,17 @@ export const findPossibleWords = (guesses: WordGuess[]): string[] => {
         if (state === 'correct' && wordLetters[i] !== letter) {
           return false;
         }
-        
+
         if (state === 'present' && !wordLetters.includes(letter)) {
           return false;
         }
-        
+
         if (state === 'present' && wordLetters[i] === letter) {
           return false;
         }
-        
+
         if (state === 'absent' && wordLetters.includes(letter)) {
-          const occurrencesInGuess = guessLetters.filter((l, idx) => 
+          const occurrencesInGuess = guessLetters.filter((l, idx) =>
             l === letter && (guess.states[idx] === 'correct' || guess.states[idx] === 'present')
           ).length;
           const occurrencesInWord = wordLetters.filter(l => l === letter).length;

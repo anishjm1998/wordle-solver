@@ -8,7 +8,6 @@ const Tutorial: React.FC = () => {
       </h2>
 
       <div className="space-y-4 text-blue-900 dark:text-gray-300">
-        {/* Introduction */}
         <div className="space-y-2">
           <p className="text-sm">
             This solver helps you find the Wordle answer! Play Wordle in your browser,
@@ -16,7 +15,6 @@ const Tutorial: React.FC = () => {
           </p>
         </div>
 
-        {/* How to Use */}
         <div>
           <p className="font-bold mb-2">How to Use:</p>
           <ol className="space-y-2 text-sm list-decimal list-inside">
@@ -27,27 +25,25 @@ const Tutorial: React.FC = () => {
           </ol>
         </div>
 
-        {/* Color Guide */}
         <div>
           <p className="font-bold mb-2">Color Pattern:</p>
           <div className="grid gap-2 text-sm">
-          <div className="flex items-center gap-2 bg-[#e4ecf7] dark:bg-gray-900 p-2 rounded-lg border border-gray-400 dark:border-gray-700 shadow-md">
-          <span className="w-4 h-4 bg-gray-300 rounded border border-gray-400 dark:border-gray-700"></span>
-  <span>Gray: Letter isn't in the word</span>
-</div>
-<div className="flex items-center gap-2 bg-[#e4ecf7] dark:bg-gray-900 p-2 rounded-lg border border-gray-400 dark:border-gray-700 shadow-md">
-<span className="w-4 h-4 bg-yellow-300 rounded border border-yellow-400 dark:border-yellow-600"></span>
-  <span>Yellow: Right letter, wrong spot</span>
-</div>
-<div className="flex items-center gap-2 bg-[#e4ecf7] dark:bg-gray-900 p-2 rounded-lg border border-gray-400 dark:border-gray-700 shadow-md">
-<span className="w-4 h-4 bg-green-300 rounded border border-green-400 dark:border-green-600"></span>
-  <span>Green: Perfect match!</span>
-</div>
+            <div className="flex items-center gap-2 bg-[#e4ecf7] dark:bg-gray-900 p-2 rounded-lg border border-gray-400 dark:border-gray-700 shadow-md">
+              <span className="w-4 h-4 bg-gray-300 rounded border border-gray-400 dark:border-gray-700"></span>
+              <span>Gray: Letter isn't in the word</span>
+            </div>
+            <div className="flex items-center gap-2 bg-[#e4ecf7] dark:bg-gray-900 p-2 rounded-lg border border-gray-400 dark:border-gray-700 shadow-md">
+              <span className="w-4 h-4 bg-yellow-300 rounded border border-yellow-400 dark:border-yellow-600"></span>
+              <span>Yellow: Right letter, wrong spot</span>
+            </div>
+            <div className="flex items-center gap-2 bg-[#e4ecf7] dark:bg-gray-900 p-2 rounded-lg border border-gray-400 dark:border-gray-700 shadow-md">
+              <span className="w-4 h-4 bg-green-300 rounded border border-green-400 dark:border-green-600"></span>
+              <span>Green: Perfect match!</span>
+            </div>
 
           </div>
         </div>
 
-        {/* Tips */}
         <div>
           <p className="font-bold mb-2">Pro Tips:</p>
           <ul className="space-y-1.5 text-sm list-disc list-inside">
@@ -60,12 +56,12 @@ const Tutorial: React.FC = () => {
         </div>
 
         <div className="bg-[#e4ecf7] dark:bg-gray-900 p-3 rounded-lg border border-blue-400 dark:border-gray-700 text-sm shadow-md">
-  <p className="font-bold mb-1">Remember:</p>
-  <p>
-    The word list updates automatically as you enter each guess.
-    All suggested words are valid Wordle answers!
-  </p>
-</div>
+          <p className="font-bold mb-1">Remember:</p>
+          <p>
+            The word list updates automatically as you enter each guess.
+            All suggested words are valid Wordle answers!
+          </p>
+        </div>
 
 
       </div>

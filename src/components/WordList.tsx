@@ -6,19 +6,17 @@ export const WordList: React.FC = () => {
 
   return (
     <div className="bg-transparent">
-  <div className="bg-[#9ec5f7] dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border-2 border-blue-400 dark:border-gray-600">
-    {/* Header with Word Count */}
-    <div className="p-4 bg-[#7ea9e4] dark:bg-gray-700 rounded-t-lg text-blue-900 dark:text-gray-200">
-      <h2 className="text-xl font-semibold">
-        Possible Words
-        <span className="ml-2 text-sm font-light text-blue-900 dark:text-gray-200">
-          ({possibleWords.length})
-        </span>
-      </h2>
-    </div>
+      <div className="bg-[#9ec5f7] dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border-2 border-blue-400 dark:border-gray-600">
+        <div className="p-4 bg-[#7ea9e4] dark:bg-gray-700 rounded-t-lg text-blue-900 dark:text-gray-200">
+          <h2 className="text-xl font-semibold">
+            Possible Words
+            <span className="ml-2 text-sm font-light text-blue-900 dark:text-gray-200">
+              ({possibleWords.length})
+            </span>
+          </h2>
+        </div>
 
 
-        {/* Scrollable Word List */}
         <div className="p-4 max-h-[450px] overflow-y-auto custom-scrollbar">
           <ul className="space-y-3">
             {possibleWords.map((word, index) => (
