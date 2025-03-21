@@ -1,21 +1,21 @@
 import _ from 'lodash';
-import { dictionary } from './dictionary';
+import { DICTIONARY } from './dictionary';
 
 export const checkWord = (guess: string, target: string) => {
   let feedback = Array(guess.length).fill('gray');
-  let targetCopy = target.split('');
+  let targetArray = target.split('');
 
   for (let i = 0; i < guess.length; i++) {
     if (guess[i] === target[i]) {
       feedback[i] = 'green';
-      targetCopy[i] = '';
+      targetArray[i] = '';
     }
   }
 
   for (let i = 0; i < guess.length; i++) {
-    if (feedback[i] !== 'green' && targetCopy.includes(guess[i])) {
+    if (feedback[i] !== 'green' && targetArray.includes(guess[i])) {
       feedback[i] = 'yellow';
-      targetCopy[targetCopy.indexOf(guess[i])] = '';
+      targetArray[targetArray.indexOf(guess[i])] = '';
     }
   }
 
@@ -23,7 +23,7 @@ export const checkWord = (guess: string, target: string) => {
 };
 
 export const getPossibleWords = (feedback: string[], guess: string) => {
-  return dictionary.filter(word => {
+  return DICTIONARY.filter(word => {
     let isPossible = true;
     let targetCopy = word.split('');
 
