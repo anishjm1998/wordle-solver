@@ -34,10 +34,10 @@ export const Keyboard: React.FC = () => {
     const baseStyles = "font-bold rounded-lg transition-all duration-200 active:scale-95 text-sm sm:text-base flex items-center justify-center";
 
     if (key === 'Enter') {
-      return `${baseStyles} bg-green-100 dark:bg-green-500 hover:bg-green-200 dark:hover:bg-green-600 text-green-700 dark:text-white px-4 py-3 sm:px-6 sm:py-4`;
+      return `${baseStyles} bg-green-100 dark:bg-green-500 hover:bg-green-200 dark:hover:bg-green-600 text-green-700 dark:text-white px-2 py-2 sm:px-4 sm:py-3`;
     }
     if (key === 'Backspace') {
-      return `${baseStyles} bg-red-100 dark:bg-red-500 hover:bg-red-200 dark:hover:bg-red-600 text-red-700 dark:text-white px-4 py-3 sm:px-6 sm:py-4 text-xl`;
+      return `${baseStyles} bg-red-100 dark:bg-red-500 hover:bg-red-200 dark:hover:bg-red-600 text-red-700 dark:text-white px-2 py-2 sm:px-4 sm:py-3 text-lg`;
     }
 
     const state = getLetterState(key);
@@ -45,21 +45,21 @@ export const Keyboard: React.FC = () => {
 
     switch (state) {
       case 'correct':
-        return `${baseStyles} bg-green-600 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700 text-white px-3 py-3 sm:px-4 sm:py-4 ${shadowStyle}`;
+        return `${baseStyles} bg-green-600 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700 text-white px-2 py-2 sm:px-3 sm:py-3 ${shadowStyle}`;
       case 'present':
-        return `${baseStyles} bg-yellow-600 hover:bg-yellow-700 dark:bg-yellow-600 dark:hover:bg-yellow-700 text-white px-3 py-3 sm:px-4 sm:py-4 ${shadowStyle}`;
+        return `${baseStyles} bg-yellow-600 hover:bg-yellow-700 dark:bg-yellow-600 dark:hover:bg-yellow-700 text-white px-2 py-2 sm:px-3 sm:py-3 ${shadowStyle}`;
       case 'absent':
-        return `${baseStyles} bg-gray-500 hover:bg-gray-600 dark:bg-gray-700 dark:hover:bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 ${shadowStyle}`;
+        return `${baseStyles} bg-gray-500 hover:bg-gray-600 dark:bg-gray-700 dark:hover:bg-gray-800 text-white px-2 py-2 sm:px-3 sm:py-3 ${shadowStyle}`;
       default:
-        return `${baseStyles} bg-gray-300 hover:bg-gray-400 dark:bg-gray-500 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-3 sm:px-4 sm:py-4 border border-gray-400 shadow-md`;
+        return `${baseStyles} bg-gray-300 hover:bg-gray-400 dark:bg-gray-500 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-2 sm:px-3 sm:py-3 border border-gray-400 shadow-md`;
     }
   };
 
   return (
-    <div className="bg-[#a0c4ff] dark:bg-gray-800 backdrop-blur-sm rounded-xl shadow-lg p-4 max-w-3xl mx-auto border border-gray-400 dark:border-gray-700">
-      <div className="flex flex-col gap-2">
+    <div className="bg-[#a0c4ff] dark:bg-gray-800 backdrop-blur-sm rounded-xl shadow-lg p-2 sm:p-4 max-w-3xl mx-auto border border-gray-400 dark:border-gray-700">
+      <div className="flex flex-col gap-1 sm:gap-2">
         {KEYBOARD_ROWS.map((row, rowIndex) => (
-          <div key={rowIndex} className="flex justify-center gap-1.5">
+          <div key={rowIndex} className="flex justify-center gap-1 sm:gap-1.5">
             {row.map((key) => (
               <button
                 key={key}
