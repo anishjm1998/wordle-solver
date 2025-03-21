@@ -47,7 +47,7 @@ export const Board: React.FC = () => {
             <button
               key={colIndex}
               className={classNames(
-                'w-12 h-12 sm:w-16 sm:h-16 border-2 flex items-center justify-center text-2xl sm:text-3xl font-bold uppercase',
+                'w-10 h-10 sm:w-14 sm:h-14 border-2 flex items-center justify-center text-xl sm:text-2xl font-bold uppercase',
                 'rounded-lg transition-all duration-200',
                 'shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500',
                 getTileColor(letterStates[rowIndex][colIndex], rowIndex, !!letter)

@@ -1,5 +1,5 @@
-import React from "react";
-import { useGame } from "../context/GameContext";
+import React from 'react';
+import { useGame } from '../context/GameContext';
 
 export const WordList: React.FC = () => {
   const { possibleWords } = useGame();
@@ -16,8 +16,7 @@ export const WordList: React.FC = () => {
           </h2>
         </div>
 
-
-        <div className="p-4 max-h-[450px] overflow-y-auto custom-scrollbar">
+        <div className="p-4 max-h-[300px] overflow-y-auto custom-scrollbar">
           <ul className="space-y-3">
             {possibleWords.map((word, index) => (
               <li
@@ -33,5 +32,3 @@ export const WordList: React.FC = () => {
     </div>
   );
 };
-
-export default WordList;
